@@ -29,7 +29,7 @@ class Crypto {
       const encryptedMessage =
         cipher.update(message, "utf-8", "hex") + cipher.final("hex");
 
-      return { encryptedMessage, iv, salt }; //return the encypted message and the IV(initialization vector)
+      return { encryptedMessage, iv, salt }; //return the encypted message, the IV(initialization vector) and the salt  
     } catch (error) {
       throw new Error(error);
     }
